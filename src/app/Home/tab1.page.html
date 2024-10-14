@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="assets/img/Logo.png" alt="Logo TEA" style="height: 30px;">
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Sección de bienvenida y avatar -->
+  <div class="welcome-section">
+    <ion-avatar>
+      <img src="assets/img/avatar.png" alt="Avatar de usuario">
+    </ion-avatar>
+    <h2>Hola,</h2>
+    <h1>Romina</h1>
+    <p>Bienvenido a TEACompañó</p>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <ion-card>
+      <ion-card-content>
+        <h3>Tenemos un nuevo curso para ti</h3>
+        <ion-button expand="block" color="primary">Unirse</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Accesos rápidos -->
+  <div class="quick-access">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button expand="block" fill="outline" routerLink="/agendar">
+            <ion-icon name="calendar-outline"></ion-icon><br/>
+            Agendar Cita
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" fill="outline" routerLink="/feedback">
+            <ion-icon name="chatbubbles-outline"></ion-icon><br/>
+            Feedback
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Noticias -->
+  <div class="news-section">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Noticias</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+        <ion-item button>
+          <ion-label>1 de cada 100 niños tienen autismo en el mundo</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+        <ion-item button>
+          <ion-label>El día internacional del TEA</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+        <ion-item button>
+          <ion-label>Síntomas de TEA</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
+
+  <!-- Imagen de comunidad -->
+  <div class="community-section">
+    <img src="assets/img/comunidad.png" alt="Comunidad" />
+  </div>
+</ion-content>
+
+
