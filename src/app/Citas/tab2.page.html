@@ -1,0 +1,96 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Citas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Agenda tu cita online</ion-card-title>
+        <ion-card-subtitle>Por favor llena el siguiente formulario</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Campo Nombre -->
+        <ion-item>
+          <ion-label position="floating">Su nombre:</ion-label>
+          <ion-input placeholder="Escriba su nombre" required></ion-input>
+        </ion-item>
+
+        <!-- Selección de fecha -->
+        <ion-item>
+          <ion-label position="floating">Selecciona el Día:</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccione la fecha"></ion-datetime>
+        </ion-item>
+
+        <!-- Selección de hora -->
+        <ion-item>
+          <ion-label position="floating">Selecciona la hora:</ion-label>
+          <ion-select placeholder="Seleccione la hora">
+            <ion-select-option value="8:30">8:30</ion-select-option>
+            <ion-select-option value="9:00">9:00</ion-select-option>
+            <ion-select-option value="9:30">9:30</ion-select-option>
+            <!-- Agrega más opciones según sea necesario -->
+          </ion-select>
+        </ion-item>
+
+        <!-- Campo de comentario -->
+        <ion-item>
+          <ion-label position="floating">Comentario:</ion-label>
+          <ion-textarea placeholder="El motivo de mi cita es ...."></ion-textarea>
+        </ion-item>
+
+        <!-- Carga de archivo -->
+        <ion-item>
+          <ion-label position="floating">Adjuntar archivo (jpg, pdf, png):</ion-label>
+          <input type="file" accept=".jpg,.png,.pdf" />
+        </ion-item>
+
+        <!-- Dropdown adicional -->
+        <ion-item>
+          <ion-label position="floating">¿Quién cubrirá su trabajo?</ion-label>
+          <ion-select placeholder="Seleccione una opción">
+            <ion-select-option value="seguro">Seguro</ion-select-option>
+            <ion-select-option value="personal">Personal</ion-select-option>
+            <!-- Agrega más opciones según sea necesario -->
+          </ion-select>
+        </ion-item>
+
+        <!-- Botón Agendar -->
+        <ion-button expand="full" color="primary">Agendar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Barra de navegación inferior -->
+  <ion-footer>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="schedule">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <ion-label>Agendar cita</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="courses">
+          <ion-icon name="book-outline"></ion-icon>
+          <ion-label>Cursos</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-footer>
+</ion-content>
