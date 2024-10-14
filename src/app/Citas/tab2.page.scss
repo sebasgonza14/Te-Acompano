@@ -1,0 +1,33 @@
+.center-text {
+    text-align: center;
+  }
+  
+  .form-container {
+    margin-top: 40px;
+  }
+  
+  ion-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 25px;  /* Más espacio entre los campos del formulario */
+  }
+  
+  ion-label {
+    margin-bottom: 10px;  /* Espacio adicional entre el label y el input */
+    font-weight: bold;    /* Para destacar los títulos de los campos */
+  }
+  
+  ion-input, ion-datetime, ion-select, ion-textarea {
+    margin-top: 5px;      /* Añadir algo de espacio sobre los campos */
+    padding: 10px;        /* Mejorar la estética de los inputs */
+    border-radius: 8px;   /* Redondear los bordes de los inputs */
+    background-color: #000000; /* Fondo ligero para los inputs */
+  }
+  
