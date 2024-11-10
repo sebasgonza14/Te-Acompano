@@ -5,7 +5,13 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  },
+  {
+    path: 'data-view',
+    loadChildren: () => import('./data-view/data-view.module').then( m => m.DataViewPageModule)
+  },
+  
+  
 ];
 @NgModule({
   imports: [
