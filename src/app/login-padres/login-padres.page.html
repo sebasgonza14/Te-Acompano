@@ -1,0 +1,23 @@
+<ion-content class="login-content">
+  <div class="header-background"></div>
+  <div class="login-container">
+    <img src="assets/img/Logo.png" alt="Character" class="character-image" />
+    <h2>Welcome back!</h2>
+    
+    <ion-item>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input placeholder="Username/Email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-icon name="eye-outline" slot="end"></ion-icon>
+    </ion-item>
+    
+    <ion-button expand="block" class="sign-in-button" (click)="navigateToHome()">Sign In</ion-button>    
+    <p class="footer-text">
+      Version 1.0.0 &nbsp;&bull;&nbsp; Powered by Srdn.Co &nbsp;&bull;&nbsp; Help & Support
+    </p>
+  </div>
+</ion-content>

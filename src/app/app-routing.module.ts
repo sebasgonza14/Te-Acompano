@@ -2,10 +2,51 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  
+
   {
-    path: '',
+    path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  
+  
+  {
+    path: 'feedback',
+    loadChildren: () => import('./feedback/feedback.module').then( m => m.FeedbackPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+
+  {
+    path: '', // Redirección inicial
+    redirectTo: '/login', // Redirige a login cuando no se especifica otra ruta
+    pathMatch: 'full'
+  },
+  {
+    path: 'login-padres',
+    loadChildren: () => import('./login-padres/login-padres.module').then( m => m.LoginPadresPageModule)
+  },  {
+    path: 'login-ninos',
+    loadChildren: () => import('./login-ninos/login-ninos.module').then( m => m.LoginNinosPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'tareas',
+    loadChildren: () => import('./tareas/tareas.module').then( m => m.TareasPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
   }
+
+
+
+
 ];
 @NgModule({
   imports: [

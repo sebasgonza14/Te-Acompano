@@ -1,0 +1,76 @@
+.content {
+    --background: #eaf6f9; /* Fondo de la página */
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: left;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .header p {
+    font-size: 1em;
+    color: #6b6b6b;
+  }
+  
+  .character-image {
+    width: 60px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .task-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff; /* Color de fondo de las tarjetas */
+  }
+  
+  .task-card.highlight {
+    background-color: #d6bffb; /* Color de fondo para la tarjeta resaltada */
+  }
+  
+  .task-info {
+    text-align: left;
+  }
+  
+  .task-info p {
+    font-size: 0.9em;
+    color: #6b6b6b;
+  }
+  
+  .task-info h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  .task-icon {
+    width: 50px;
+    height: auto;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .home-icon {
+    font-size: 2em;
+    color: #d6bffb; /* Color del icono de casa */
+  }
+  

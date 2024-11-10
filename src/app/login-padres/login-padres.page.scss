@@ -1,0 +1,52 @@
+.login-content {
+    --background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .header-background {
+    height: 40%;
+    background-color: #bdeef3; /* Color del fondo superior */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  
+  .login-container {
+    text-align: center;
+    margin-top: -20%;
+  }
+  
+  .logo-text {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .compano-text {
+    color: #ff6f61; 
+    font-size: 0.7em;
+  }
+  
+  .character-image {
+    width: 200px;
+    margin-top: -50px;
+  }
+  
+  ion-item {
+    margin-top: 15px;
+    --background: #f3eaff;
+    border-radius: 8px;
+  }
+  
+  .sign-in-button {
+    margin-top: 20px;
+    --background: #d6bffb;
+    color: #fff;
+  }
+  
+  .footer-text {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 30px;
+  }
+  

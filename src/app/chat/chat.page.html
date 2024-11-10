@@ -1,0 +1,22 @@
+<ion-content class="chat-content">
+  <div class="header">
+    <img src="assets/img/Monstruo.png" alt="Lala" class="lala-image" />
+    <h1>Chat con Lala</h1>
+  </div>
+
+  <div class="chat-messages">
+    <div *ngFor="let message of messages" [ngClass]="{'bot-message': message.sender === 'bot', 'user-message': message.sender === 'user'}" class="message">
+      <img *ngIf="message.sender === 'bot'" src="assets/img/Monstruo.png" alt="Lala" class="message-avatar" />
+      <p>{{ message.content }}</p>
+    </div>
+  </div>
+
+  <div class="message-input">
+    <ion-item lines="none">
+      <ion-input [(ngModel)]="newMessage" placeholder="Escribe un mensaje..." type="text"></ion-input>
+      <ion-button fill="clear" (click)="sendMessage()">
+        <ion-icon name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+</ion-content>

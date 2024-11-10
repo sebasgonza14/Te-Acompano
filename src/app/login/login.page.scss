@@ -1,0 +1,47 @@
+.page-background {
+    --background: #c2f0f6c3; /* Color de fondo de la página */
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  .welcome-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .subtitle {
+    font-size: 1em;
+    color: #6b6b6b;
+    margin-bottom: 2em;
+  }
+  
+  .button-style {
+    width: 70%;
+    font-size: 1.2em;
+    margin: 1em auto;
+  }
+  
+  .padres-button {
+    --background: #bdeef3; /* Color del botón PADRES */
+    color: #000;
+  }
+  
+  .ninos-button {
+    --background: #d6bffb; /* Color del botón NIÑOS */
+    color: #000;
+  }
+  
+  .character-container {
+    margin-top: 2em;
+    text-align: center;
+  }
+  
+  .character-image {
+    width: 350px; 
+    height: auto;
+  }
+  

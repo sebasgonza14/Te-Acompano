@@ -1,0 +1,59 @@
+.content {
+    --background: #bdeef3cc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .welcome-container {
+    text-align: center;
+    color: #000;
+    margin-top: 20px;
+  }
+  
+  .welcome-container h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .welcome-container h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .welcome-container p {
+    color: #6b6b6b;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  .icons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .icon-button {
+    --background: #d6bffb; /* Fondo para el botón de ícono */
+    color: #000;
+    width: 100px;
+    height: 100px;
+    margin: 0 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .character-container {
+    margin-top: 200px;
+    text-align: center;
+  }
+  
+  .character-image {
+    width: 80px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+  }
+  

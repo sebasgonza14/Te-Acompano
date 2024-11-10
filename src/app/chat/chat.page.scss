@@ -1,0 +1,88 @@
+.chat-content {
+    --background: #eaf6f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #bdeef3;
+  }
+  
+  .lala-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .header h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    max-width: 75%;
+  }
+  
+  .bot-message {
+    flex-direction: row;
+    background-color: #d6bffb;
+    border-radius: 15px 15px 15px 0;
+    padding: 10px 15px;
+    color: #000;
+  }
+  
+  .user-message {
+    flex-direction: row-reverse;
+    background-color: #ffffff;
+    border-radius: 15px 15px 0 15px;
+    padding: 10px 15px;
+    color: #000;
+    margin-left: auto;
+  }
+  
+  .message-avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+  
+  .message p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  
+  .message-input {
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .message-input ion-item {
+    --background: #f3eaff;
+    border-radius: 20px;
+  }
+  
+  .message-input ion-input {
+    font-size: 1em;
+  }
+  
+  .message-input ion-button {
+    color: #d6bffb;
+  }
+  
