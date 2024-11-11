@@ -27,7 +27,8 @@ const routes: Routes = [
   {
     path: 'login-padres',
     loadChildren: () => import('./login-padres/login-padres.module').then( m => m.LoginPadresPageModule)
-  },  {
+  },
+  {
     path: 'login-ninos',
     loadChildren: () => import('./login-ninos/login-ninos.module').then( m => m.LoginNinosPageModule)
   },

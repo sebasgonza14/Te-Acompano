@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Familiares</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of familiares">
+      <ion-label>
+        <h2>Nombre: {{ item.Nombre }}</h2>
+        <p>Parentesco: {{ item.Parentesco }}</p>
+        <p>Celular: {{ item.Celular }}</p>
+        <p>Edad: {{ item.Edad }}</p>
+        <p>ID: {{ item.ID }}</p>
+        <p>Niño: {{ item.Nino }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
