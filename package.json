@@ -27,7 +27,7 @@
     "@capacitor/haptics": "6.0.1",
     "@capacitor/keyboard": "6.0.2",
     "@capacitor/status-bar": "6.0.1",
-    "@ionic/angular": "^8.0.0",
+    "@ionic/angular": "^8.4.0",
     "cli": "^1.0.1",
     "firebase": "^10.14.1",
     "firebase-tools": "^13.24.2",
