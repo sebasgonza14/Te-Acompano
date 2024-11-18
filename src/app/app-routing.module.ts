@@ -45,7 +45,14 @@ const routes: Routes = [
   {
     path: 'chat',
     loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
-  }
+  },
+  {
+    path: 'data-view',
+    loadChildren: () => import('./data-view/data-view.module').then( m => m.DataViewPageModule)
+  },
+
+
+  
 
 
 

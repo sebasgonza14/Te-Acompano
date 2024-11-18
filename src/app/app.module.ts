@@ -61,5 +61,6 @@ import { Capacitor } from '@capacitor/core';
     provideVertexAI(() => getVertexAI())
   ],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule {}
