@@ -1,0 +1,185 @@
+.home-content {
+  --background: #f9f9ff;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c59cfa;
+  padding: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.icon {
+  font-size: 1.5em;
+  color: #6b6b6b;
+}
+
+.welcome-section {
+  text-align: center;
+  background-color: #c59cfa;
+  padding: 20px;
+  
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+}
+
+.welcome-section h3 {
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.welcome-section p {
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.acceso{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.history-button {
+  font-size: 0.9em;
+  color: #6b6b6b;
+}
+
+.course-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #bff5fb96;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.course-banner p {
+  font-size: 1.2em;
+  color: #6b6b6b;
+}
+
+.join-button {
+  
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.quick-access {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px  ;
+}
+
+.full-list-button {
+  font-size: 0.9em;
+  color: #6b6b6b;
+}
+
+.access-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.access-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #e9d9ff;
+  border-radius: 15px;
+  font-size: 0.9em;
+  color: #6b6b6b;
+  text-align: center;
+}
+
+.news-section {
+  background-color: #333a56;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.news-section h4 {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.news-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.news-list ion-icon {
+  margin-right: 8px;
+}
+
+.community-message {
+  text-align: center;
+  color: #6b6b6b;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+.community-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.community-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+}
+
+
+.icon {
+  font-size: 1.5em;
+  color: #6b6b6b;
+}
+
+ion-popover {
+  --width: 150px; /* Ajusta el ancho del popover */
+  --border-radius: 8px;
+}
+
+ion-item {
+  --background: transparent;
+  text-align: center;
+  font-size: 1em;
+  color: #333;
+}

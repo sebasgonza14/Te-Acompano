@@ -16,6 +16,10 @@ export class InicioPage implements OnInit {
     this.navCtrl.navigateForward('/chat');
   }
 
+  goToLogin() {
+    this.navCtrl.navigateRoot('/login'); // Redirige a la página de login
+  }
+
   ngOnInit() {
   }
 

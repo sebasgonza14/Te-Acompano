@@ -1,33 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="center-text">Cursos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="cursos-content">
+  <!-- Encabezado con título y logo -->
+  <div class="header">
+    <img src="assets/img/Logo.png" alt="TEA Logo" class="logo" />
+    <h2>Cursos</h2>
+    <ion-icon name="notifications-outline" class="icon"></ion-icon>
+    <ion-icon name="settings-outline" class="icon"></ion-icon>
+  </div>
 
-<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Sección de Cursos Activos -->
+  <div class="section">
+    <h4>Tus cursos activos:</h4>
+    <div class="course-card">
+      <h5>¿Qué es el TEA?</h5>
+      <p>26 Feb 2024 - 26 Feb 2024</p>
+      <p>Lorem ipsum nappertnometer reskade när dekakäling kötoss...</p>
+      <ion-button color="danger" class="status-button" fill="solid">Pending</ion-button>
+    </div>
+  </div>
 
-  <ion-grid class="center-content">
-    <ion-row class="ion-justify-content-center ion-align-items-center">
-      <ion-col size-md="6" size-sm="12" class="form-container">
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          
-          <ion-card-header>
-            <ion-card-title>Que es el TEA?</ion-card-title>
-            <ion-card-subtitle>Curso de introducción</ion-card-subtitle>
-          </ion-card-header>
-
-          <ion-card-content>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum itaque ullam facilis? Inventore a accusantium hic animi, sunt culpa molestiae voluptate aut unde modi voluptates nesciunt deserunt, voluptatibus nobis dolores?
-          </ion-card-content>
-
-          <!-- Botón Unirse -->
-          <ion-item lines="none">
-            <ion-button expand="block" color="primary" slot="end">Unirse</ion-button>
-          </ion-item>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  
+  <!-- Sección de Nuevos Cursos -->
+  <div class="section">
+    <h4>Nuevos cursos :</h4>
+    <div class="course-card">
+      <h5>Signos y síntomas del TEA</h5>
+      <p>14 Nov 2024 - 26 Nov 2024</p>
+      <p>Lorem ipsum nebaligt benyda diapgät rösm al. Pepulig vabenat.</p>
+      <ion-button color="success" class="join-button" fill="solid">Unirte</ion-button>
+    </div>
+    <div class="course-card">
+      <h5>¿Cómo puedo ayudar a mi hijo?</h5>
+      <p> 15 Dic 2024 - 26 Dic 2024</p>
+      <p>Lorem ipsum nebaligt benyda diapgät rösm al. Pepulig vabenat.</p>
+      <ion-button color="success" class="join-button" fill="solid">Unirte</ion-button>
+    </div>
+    <div class="course-card">
+      <h5>¿Tratamientos?</h5>
+      <p>26 Dic 2024 - 28 Dic 2024</p>
+      <p>Lorem ipsum nebaligt benyda diapgät rösm al. Pepulig vabenat.</p>
+      <ion-button color="success" class="join-button" fill="solid">Unirte</ion-button>
+    </div>
+    <div class="course-card">
+      <h5>Entre la esperanza </h5>
+      <p>26 Feb 2024 - 26 Feb 2024</p>
+      <p>Lorem ipsum nebaligt benyda diapgät rösm al. Pepulig vabenat.</p>
+      <ion-button color="success" class="join-button" fill="solid">Unirte</ion-button>
+    </div>
+    <div class="course-card">
+      <h5>Terapia y su importancia</h5>
+      <p>14 Feb 2025 - 26 Feb 2025</p>
+      <p>Lorem ipsum nebaligt benyda diapgät rösm al. Pepulig vabenat.</p>
+      <ion-button color="success" class="join-button" fill="solid">Unirte</ion-button>
+    </div>
+    <div class="course-card">
+      <h5>Cuidar al cuidador</h5>
+      <p>26 Feb 2024 - 28 Feb 2025</p>
+      <p>Personal Matter</p>
+      <ion-button color="success" class="join-button" fill="solid">Unirte</ion-button>
+    </div>
+  </div>
 </ion-content>
+

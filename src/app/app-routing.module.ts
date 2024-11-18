@@ -8,6 +8,8 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
+
+  
   
   
   {
@@ -20,8 +22,8 @@ const routes: Routes = [
   },
 
   {
-    path: '', // Redirección inicial
-    redirectTo: '/login', // Redirige a login cuando no se especifica otra ruta
+    path: '', 
+    redirectTo: '/login', 
     pathMatch: 'full'
   },
   {

@@ -1,88 +1,76 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <img src="assets/img/Logo.png" alt="Logo TEA" style="height: 30px;">
-    </ion-buttons>
-    <ion-title>Home</ion-title>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon name="notifications-outline"></ion-icon>
-      </ion-button>
-      <ion-button>
-        <ion-icon name="settings-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="home-content">
+  <!-- Encabezado con título y logo -->
+  <div class="header">
+    <img src="assets/img/Logo.png" alt="TEA Logo" class="logo" />
+    <hr>
+    <ion-icon name="notifications-outline" class="icon"></ion-icon>
+    <p></p>
+    <p></p>
+    <p></p>
+    <ion-button fill="clear" class="icon" >
+      <ion-icon name="settings-outline" class="icon"></ion-icon>
+        <ion-content>
+          <ion-list>
+            <ion-item button (click)="logout()">Cerrar sesión</ion-item>
+          </ion-list>
+        </ion-content>
+    </ion-button>
+    
+  </div>
 
-<ion-content [fullscreen]="true">
-  <!-- Sección de bienvenida y avatar -->
+  <!-- Bienvenida y perfil de usuario -->
   <div class="welcome-section">
-    <ion-avatar>
-      <img src="assets/img/avatar.png" alt="Avatar de usuario">
+    <ion-avatar class="profile-avatar">
+      <img src="assets/img/avatar.png" alt="Profile" />
     </ion-avatar>
-    <h2>Hola,</h2>
-    <h1>Romina</h1>
-    <p>Bienvenido a TEACompañó</p>
+    <h3>Hola, Sofía Lopez</h3>
+    <p>Bienvenido a TEAcompaño</p>
   </div>
 
-  <!-- Dashboard -->
+  <!-- Dashboard y cursos -->
   <div class="dashboard">
-    <ion-card>
-      <ion-card-content>
-        <h3>Tenemos un nuevo curso para ti</h3>
-        <ion-button expand="block" color="primary">Unirse</ion-button>
-      </ion-card-content>
-    </ion-card>
+    <h4>Dashboard</h4>
   </div>
 
-  <!-- Accesos rápidos -->
+  <div class="course-banner">
+    <p>Tenemos un nuevo curso para ti</p>
+    <ion-button  class="join-button">UNIRSE</ion-button>
+  </div>
+
+  <!-- Sección de acceso rápido -->
+   <div class="acceso">
+    <h4>¿A qué quieres acceder?</h4>
+   </div>
+  
   <div class="quick-access">
-    <ion-grid>
-      <ion-row>
-        <ion-col size="4">
-          <ion-button expand="block" fill="outline" routerLink="/agendar">
-            <ion-icon name="calendar-outline"></ion-icon><br/>
-            Agendar Cita
-          </ion-button>
-        </ion-col>
-        <ion-col size="4">
-          <ion-button expand="block" fill="outline" routerLink="/feedback">
-            <ion-icon name="chatbubbles-outline"></ion-icon><br/>
-            Feedback
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <div class="access-buttons">
+      <ion-button class="access-button" (click)="goToCitas()">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <h4>Agendar Cita</h4>
+      </ion-button>
+      <ion-button class="access-button" (click)="goToFeedback()">
+        <ion-icon name="chatbubble-outline"></ion-icon>
+        <h4>Feedback</h4>
+      </ion-button>
+    </div>
   </div>
+  
 
-  <!-- Noticias -->
+  <!-- Sección de noticias -->
   <div class="news-section">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Noticias</ion-card-title>
-      </ion-card-header>
-      <ion-list>
-        <ion-item button>
-          <ion-label>1 de cada 100 niños tienen autismo en el mundo</ion-label>
-          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-        </ion-item>
-        <ion-item button>
-          <ion-label>El día internacional del TEA</ion-label>
-          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-        </ion-item>
-        <ion-item button>
-          <ion-label>Síntomas de TEA</ion-label>
-          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-        </ion-item>
-      </ion-list>
-    </ion-card>
+    <h4>Noticias</h4>
+    <ul class="news-list">
+      <li><ion-icon name="chevron-forward-outline"></ion-icon> 1 de cada 100 niños tienen autismo en el mundo</li>
+      <li><ion-icon name="chevron-forward-outline"></ion-icon> El día internacional del TEA</li>
+      <li><ion-icon name="chevron-forward-outline"></ion-icon> Síntomas de TEA</li>
+    </ul>
   </div>
 
-  <!-- Imagen de comunidad -->
-  <div class="community-section">
+  <!-- Imagen final -->
+  <div class="community-image">
     <img src="assets/img/comunidad.png" alt="Comunidad" />
   </div>
 </ion-content>
+
 
 

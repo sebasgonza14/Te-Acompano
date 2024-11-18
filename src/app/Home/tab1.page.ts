@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -8,10 +8,19 @@ import { NavController } from '@ionic/angular';
 })
 export class Tab1Page {
 
-  constructor(private navCtrl: NavController) {}
+  constructor(private navCtrl: NavController , private popoverController: PopoverController) {}
+
+  logout() {
+    this.popoverController.dismiss(); // Cierra el popover
+    this.navCtrl.navigateRoot('/login'); // Redirige a la página de login
+  }
 
   goToFeedback() {
     this.navCtrl.navigateForward('/tabs/feedback');
+  }
+
+  goToCitas() {
+    this.navCtrl.navigateForward('/tabs/citas'); // Navega a la página de Citas
   }
 
 }

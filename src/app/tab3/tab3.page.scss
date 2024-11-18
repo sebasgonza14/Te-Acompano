@@ -1,0 +1,73 @@
+.cursos-content {
+    --background: #f9f9ff;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c59cfa;
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .icon {
+    font-size: 1.5em;
+    color: #6b6b6b;
+  }
+  
+  .section {
+    margin-top: 20px;
+  }
+  
+  .section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #6b6b6b;
+  }
+  
+  .course-card {
+    background-color: #dcdada5e;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card h5 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 0 5px;
+  }
+  
+  .course-card p {
+    font-size: 0.9em;
+    color: #6b6b6b;
+    margin: 5px 0;
+  }
+  
+  .status-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.8em;
+    border-radius: 15px;
+  }
+  
+  .join-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.8em;
+    border-radius: 15px;
+    background-color: #4caf50;
+    color: #ffffff;
+  }
+  

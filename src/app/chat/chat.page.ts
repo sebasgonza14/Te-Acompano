@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 interface Message {
   content: string;
@@ -14,8 +15,14 @@ export class ChatPage implements OnInit {
   messages: Message[] = [];
   newMessage = '';
 
+  constructor(private navCtrl: NavController) {}
+
   ngOnInit() {
     this.startChat();
+  }
+
+  goToInicio() {
+    this.navCtrl.navigateRoot('/inicio'); // Redirige a la pestaña tab1
   }
 
   startChat() {
