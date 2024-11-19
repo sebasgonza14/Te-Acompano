@@ -54,7 +54,13 @@ const routes: Routes = [
   {
     path: 'crear-usuario',
     loadChildren: () => import('./crear-usuario/crear-usuario.module').then( m => m.CrearUsuarioPageModule)
+  },  {
+    path: 'calendario',
+    loadChildren: () => import('./calendario/calendario.module').then( m => m.CalendarioPageModule)
   },
+
+  
+
   
 
 ];
