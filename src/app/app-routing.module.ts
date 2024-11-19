@@ -50,12 +50,12 @@ const routes: Routes = [
     path: 'data-view',
     loadChildren: () => import('./data-view/data-view.module').then( m => m.DataViewPageModule)
   },
-
-
   
-
-
-
+  {
+    path: 'crear-usuario',
+    loadChildren: () => import('./crear-usuario/crear-usuario.module').then( m => m.CrearUsuarioPageModule)
+  },
+  
 
 ];
 @NgModule({
