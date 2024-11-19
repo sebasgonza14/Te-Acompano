@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calendario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Selector de fecha -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Seleccionar Fecha</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-datetime
+        placeholder="Elige un día"
+        display-format="DD MMM YYYY"
+        (ionChange)="onDateChange($event)"
+      ></ion-datetime>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Formulario para asignar tarea -->
+  <ion-card *ngIf="selectedDate">
+    <ion-card-header>
+      <ion-card-title>Asignar una Tarea</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (submit)="saveTask()">
+        <ion-item>
+          <ion-label position="stacked">Tarea</ion-label>
+          <ion-input
+            type="text"
+            placeholder="Escribe una tarea"
+            [(ngModel)]="task"
+            name="task"
+            required
+          ></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" color="primary">
+          Guardar Tarea
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Mostrar tareas -->
+  <ion-card *ngIf="tasks.length > 0">
+    <ion-card-header>
+      <ion-card-title>Tareas Asignadas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let task of tasks">
+          <ion-label>
+            <h2>{{ task.fecha }}</h2>
+            <p>{{ task.tarea }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
