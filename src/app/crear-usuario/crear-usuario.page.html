@@ -1,8 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Crear Usuario</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="header">
+  <img src="assets/img/Logo.png" alt="TEA Logo" class="logo" />
+  <h2>BIENVENIDO</h2>
+  <p></p>
+  
+</div>
+
 
 <ion-content>
   <form (ngSubmit)="crearUsuario()">
@@ -30,6 +32,8 @@
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input [(ngModel)]="usuario.contrasena" name="contrasena" type="password" required></ion-input>
     </ion-item>
-    <ion-button expand="full" type="submit">Crear Usuario</ion-button>
+    <ion-button expand="full" type="submit" >Crear usuario</ion-button>
+   
+    
   </form>
 </ion-content>

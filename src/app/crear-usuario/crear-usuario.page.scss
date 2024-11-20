@@ -1,0 +1,38 @@
+.citas-content {
+    --background: #f9f9ff;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c59cfa;
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 40px;
+    height: auto;
+  }
+  
+  .icon {
+    font-size: 1.5em;
+    color: #6b6b6b;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .page-title h3 {
+    font-size: 1.5em;
+    color: #000;
+  }
+  
+  .page-title p {
+    font-size: 1em;
+    color: #6b6b6b;
+  }

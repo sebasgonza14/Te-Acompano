@@ -29,31 +29,46 @@
 
   <!-- Dashboard y cursos -->
   <div class="dashboard">
-    <h4>Dashboard</h4>
+    <h4>Me mantengo en aprendizaje para ayudar a mi hijo </h4>
+  </div>
+  <div>
+    <img src="assets/img/aprendizaje.jpg" alt="Profile" />
   </div>
 
   <div class="course-banner">
-    <p>Tenemos un nuevo curso para ti</p>
+    <h4>Tenemos un nuevo curso para ti!!</h4>
     <ion-button  class="join-button">UNIRSE</ion-button>
   </div>
 
   <!-- Sección de acceso rápido -->
    <div class="acceso">
-    <h4>¿A qué quieres acceder?</h4>
+    <h2>Organiza el día de tu hijio</h2>
+    <h4>Tener un itinerario puede marcar la diferencia en el día a día</h4>
    </div>
   
   <div class="quick-access">
     <div class="access-buttons">
-      <ion-button class="access-button" (click)="goToCitas()">
-        <ion-icon name="calendar-outline"></ion-icon>
-        <h4>Agendar Cita</h4>
+      <ion-button class="access-button" (click)="goTocalendario()">
+        <img src="assets/img/calendario.png" alt="Feedback" class="icono-imagen" />
+   
       </ion-button>
-      <ion-button class="access-button" (click)="goToFeedback()">
-        <ion-icon name="chatbubble-outline"></ion-icon>
-        <h4>Feedback</h4>
-      </ion-button>
+      
     </div>
   </div>
+
+  <div class="acceso">
+    <h4>Mira como le fue a tu hijo hoy</h4>
+</div>
+<div class="quick-access">
+  <div class="access-button">
+    <ion-button class="access-button" (click)="goToFeedback()">
+      <img src="assets/img/feedback.png" alt="Feedback" class="icono-imagen" />
+    </ion-button>
+  </div>
+  
+
+</div>
+
   
 
   <!-- Sección de noticias -->

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Firestore, collection, addDoc, getDocs } from '@angular/fire/firestore';
 
+
+
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.page.html',
@@ -43,4 +45,6 @@ export class CalendarioPage {
     const querySnapshot = await getDocs(docRef);
     this.tasks = querySnapshot.docs.map((doc) => doc.data() as { fecha: string; tarea: string });
   }
+
+  
 }

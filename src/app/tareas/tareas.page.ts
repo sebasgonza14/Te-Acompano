@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Firestore, collection, query, where, getDocs } from '@angular/fire/firestore';
 
+
 @Component({
   selector: 'app-tareas',
   templateUrl: './tareas.page.html',

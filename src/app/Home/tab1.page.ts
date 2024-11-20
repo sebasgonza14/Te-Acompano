@@ -19,8 +19,8 @@ export class Tab1Page {
     this.navCtrl.navigateForward('/tabs/feedback');
   }
 
-  goToCitas() {
-    this.navCtrl.navigateForward('/tabs/citas'); // Navega a la página de Citas
+  goTocalendario() {
+    this.navCtrl.navigateForward('/calendario'); // Navega a la página de Citas
   }
 
 }

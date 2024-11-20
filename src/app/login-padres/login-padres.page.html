@@ -15,7 +15,18 @@
       <ion-icon name="eye-outline" slot="end"></ion-icon>
     </ion-item>
     
-    <ion-button expand="block" class="sign-in-button" (click)="navigateToHome()">Sign In</ion-button>    
+    <ion-button expand="block" class="sign-in-button" (click)="navigateToHome()">Sign In</ion-button>  
+    
+    <p class="footer-text">
+      ¿No estas registrado?  &nbsp;&bull;&nbsp; 
+    </p>
+
+    <!-- Botón para redirigir a la página Crear Usuario -->
+    <div class="footer-button">
+      <ion-button expand="block" class="sign-in-button"  routerLink="/crear-usuario">
+        Registrarse
+      </ion-button>
+    </div>
     <p class="footer-text">
       Version 1.0.0 &nbsp;&bull;&nbsp; Powered by Srdn.Co &nbsp;&bull;&nbsp; Help & Support
     </p>
