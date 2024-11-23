@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Consejos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="messages-container">
+    <h1>Consejos</h1>
+
+    <!-- Mostrar los mensajes -->
+    <div class="message" *ngFor="let message of messages">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/img/default-avatar.png" alt="User Avatar" />
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ message.user }}</h2>
+          <p>{{ message.text }}</p>
+        </ion-label>
+      </ion-item>
+    </div>
+  </div>
+
+  <!-- Formulario para escribir un mensaje -->
+  <div class="input-container">
+    <ion-item>
+      <ion-input
+        placeholder="Comparte tu consejo..."
+        [(ngModel)]="newMessage"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="secondary" (click)="sendMessage()">
+      Enviar
+    </ion-button>
+  </div>
+</ion-content>

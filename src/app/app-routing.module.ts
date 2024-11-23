@@ -54,10 +54,32 @@ const routes: Routes = [
   {
     path: 'crear-usuario',
     loadChildren: () => import('./crear-usuario/crear-usuario.module').then( m => m.CrearUsuarioPageModule)
-  },  {
+  },
+  {
     path: 'calendario',
     loadChildren: () => import('./calendario/calendario.module').then( m => m.CalendarioPageModule)
   },
+  {
+    path: 'canales',
+    loadChildren: () => import('./canales/canales.module').then( m => m.CanalesPageModule)
+  },  {
+    path: 'preguntas',
+    loadChildren: () => import('./preguntas/preguntas.module').then( m => m.PreguntasPageModule)
+  },
+  {
+    path: 'tips',
+    loadChildren: () => import('./tips/tips.module').then( m => m.TipsPageModule)
+  },
+  {
+    path: 'consejos',
+    loadChildren: () => import('./consejos/consejos.module').then( m => m.ConsejosPageModule)
+  },
+  {
+    path: 'acompanamiento',
+    loadChildren: () => import('./acompanamiento/acompanamiento.module').then( m => m.AcompanamientoPageModule)
+  },
+
+ 
 
   
 

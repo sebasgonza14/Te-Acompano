@@ -23,4 +23,8 @@ export class Tab1Page {
     this.navCtrl.navigateForward('/calendario'); // Navega a la página de Citas
   }
 
+  goTocanales() {
+    this.navCtrl.navigateForward('/canales'); // Navega a la página de Citas
+  }
+
 }

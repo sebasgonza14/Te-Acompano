@@ -1,0 +1,82 @@
+/* Estilos generales */
+ion-content {
+    --background: #f4f5f8; /* Fondo claro */
+    font-family: 'Arial', sans-serif;
+    padding: 16px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 24px;
+  
+    h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333; /* Color de texto principal */
+    }
+  }
+  
+  /* Contenedor de canales */
+  .channels-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Estilo de cada canal */
+  .channel-card {
+    background-color: #ffffff; /* Fondo de la tarjeta */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  
+    ion-icon {
+      font-size: 2rem;
+      color: #0078d4; /* Azul principal */
+      margin-bottom: 8px;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #444; /* Texto secundario */
+    }
+  
+    p {
+      font-size: 1rem;
+      color: #666; /* Texto suave */
+      margin-bottom: 16px;
+    }
+  
+    ion-button {
+      --border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  
+    /* Animación de hover */
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  
+  /* Colores personalizados */
+  ion-button[color="primary"] {
+    --background: #0078d4; /* Azul principal */
+    --background-hover: #005ea1; /* Azul oscuro */
+  }
+  
+  ion-button[color="secondary"] {
+    --background: #28a745; /* Verde */
+    --background-hover: #1e7e34; /* Verde oscuro */
+  }
+  
+  ion-button[color="tertiary"] {
+    --background: #ffcc00; /* Amarillo */
+    --background-hover: #cc9900; /* Amarillo oscuro */
+  }
+  

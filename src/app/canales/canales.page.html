@@ -1,0 +1,53 @@
+<ion-content>
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="tabs/tab1"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Nuestros canales</ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="settings-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Lista de canales -->
+  <div class="channels-container">
+    <!-- Canal: Preguntas Frecuentes -->
+    <div class="channel-card">
+      <ion-icon name="help-circle-outline"></ion-icon>
+      <h2>Preguntas Frecuentes</h2>
+      <p>Encuentra respuestas a las dudas más comunes o plantea tus preguntas aquí.</p>
+      <ion-button color="primary" expand="block" (click)="navigateToPreguntas()">Entrar</ion-button>
+
+    </div>
+
+    <!-- Canal: Tips entre Papás -->
+    <div class="channel-card">
+      <ion-icon name="bulb-outline"></ion-icon>
+      <h2>Tips entre Papás</h2>
+      <p>Comparte consejos y experiencias con otros padres.</p>
+      <ion-button color="primary" expand="block" (click)="navigateToConsejos()">Entrar</ion-button>
+    </div>
+
+    <!-- Canal: No Están Solos -->
+    <div class="channel-card">
+      <ion-icon name="people-outline"></ion-icon>
+      <h2>No Están Solos</h2>
+      <p>Un espacio de apoyo emocional y reflexión.</p>
+      <ion-button color="primary" expand="block" (click)="navigateToAcompanamiento()">Entrar</ion-button>
+    </div>
+  </div>
+
+  
+</ion-content>
+
+
+
