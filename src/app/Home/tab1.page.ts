@@ -1,14 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, PopoverController } from '@ionic/angular';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
+  userEmail: string = '';
 
-  constructor(private navCtrl: NavController , private popoverController: PopoverController) {}
+  constructor(private navCtrl: NavController, private popoverController: PopoverController, private firebaseService: FirebaseService) {}
+
+  ngOnInit() {
+    const currentUser = this.firebaseService.getCurrentUser();
+    if (currentUser) {
+      this.userEmail = currentUser.email || '';
+    }
+  }
 
   logout() {
     this.popoverController.dismiss(); // Cierra el popover
@@ -26,5 +35,4 @@ export class Tab1Page {
   goTocanales() {
     this.navCtrl.navigateForward('/canales'); // Navega a la página de Citas
   }
-
 }

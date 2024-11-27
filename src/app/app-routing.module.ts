@@ -78,6 +78,14 @@ const routes: Routes = [
     path: 'acompanamiento',
     loadChildren: () => import('./acompanamiento/acompanamiento.module').then( m => m.AcompanamientoPageModule)
   },
+  {
+    path: 'registrarse',
+    loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
+  },
+  {
+    path: 'iniciar-sesion',
+    loadChildren: () => import('./iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
+  },
 
  
 
