@@ -9,6 +9,7 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class Tab1Page implements OnInit {
   userEmail: string = '';
+  userVersion: string = 'free'; // Versión predeterminada
 
   constructor(private navCtrl: NavController, private popoverController: PopoverController, private firebaseService: FirebaseService) {}
 

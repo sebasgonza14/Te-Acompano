@@ -42,6 +42,22 @@
       </ion-card-content>
     </ion-card>
 
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Selecciona tu versión</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Versión</ion-label>
+          <ion-select [(ngModel)]="selectedVersion" name="version">
+            <ion-select-option value="free">Gratuita</ion-select-option>
+            <ion-select-option value="premium">Premium ($10)</ion-select-option>
+            <ion-select-option value="gold">Gold ($20)</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <div id="paypal-button-container" style="margin-top: 20px;"></div>
     <ion-button expand="block" type="submit">Continuar</ion-button>
   </form>
 </ion-content>
