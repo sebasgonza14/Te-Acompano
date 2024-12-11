@@ -1,5 +1,6 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+/*
 :root {
 	--ion-color-primary: #e6a5fd;
 	--ion-color-primary-rgb: 230,165,253;
@@ -8,4 +9,56 @@
 	--ion-color-primary-shade: #ca91df;
 	--ion-color-primary-tint: #e9aefd;
 }
+*/
+	:root {
+  // Colores comunes
+  --ion-color-primary: #e6a5fd;
+  --ion-color-primary-rgb: 230, 165, 253;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0, 0, 0;
+  --ion-color-primary-shade: #ca91df;
+  --ion-color-primary-tint: #e9aefd;
+}
+
+/* Colores específicos para iOS */
+.ios {
+	--ion-color-primary: #8a1eb8;
+	--ion-color-primary-rgb: 74, 144, 226;
+	--ion-color-primary-contrast: #000000;
+	--ion-color-primary-contrast-rgb: 255, 255, 255;
+	--ion-color-primary-shade: #3d7cc1;
+	--ion-color-primary-tint: #5b9fe5;
+  }
+  
+  /* Colores específicos para Android */
+  .md {
+	--ion-color-primary: #e9aefd;
+	--ion-color-primary-rgb: 255, 87, 34;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255, 255, 255;
+	--ion-color-primary-shade:#e9aefd;
+	--ion-color-primary-tint: #e9aefd;
+  }
+  
+  :root {
+	--ion-color-primary: #e6a5fd; /* Color de fondo */
+	--ion-color-primary-contrast: #eda7f1; /* Color del texto en botones o elementos primarios */
+	--ion-text-color: #000000; /* Color del texto */
+  }
+  
+  /* Colores específicos para iOS */
+  .ios {
+	--ion-text-color: #e281eb; /* Texto negro en iOS */
+  }
+  
+  /* Colores específicos para Android */
+  .md {
+	--ion-text-color: #eb80e5; /* Texto blanco en Android */
+  }
+  
+  
+  body {
+	background: var(--ion-color-primary);
+  }
+  
 

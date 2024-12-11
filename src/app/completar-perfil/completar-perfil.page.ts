@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import { Firestore, doc, setDoc } from '@angular/fire/firestore'; // Importa doc y setDoc
 import { NavController, AlertController } from '@ionic/angular';
+import { FirebaseService } from '../services/firebase.service'; // Importa el servicio de Firebase
 
 declare var paypal: any; // Declaramos PayPal para integrarlo con su SDK
 
@@ -31,7 +32,8 @@ export class CompletarPerfilPage implements OnInit {
   constructor(
     private firestore: Firestore,
     private navCtrl: NavController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private firebaseService: FirebaseService // Inyecta el servicio de Firebase
   ) {}
 
   ngOnInit() {
@@ -39,6 +41,13 @@ export class CompletarPerfilPage implements OnInit {
   }
 
   async submitForm() {
+    const currentUser = this.firebaseService.getCurrentUser(); // Obtén el usuario autenticado
+    if (!currentUser) {
+      alert('Error: No se encontró un usuario autenticado.');
+      return;
+    }
+
+    const uid = currentUser.uid; // Obtén el UID del usuario autenticado
     const childCode = this.generateCode(); // Generar el código del niño
 
     // Preparar los datos para guardar en Firestore
@@ -52,20 +61,18 @@ export class CompletarPerfilPage implements OnInit {
     };
 
     try {
-      // Referencia a la colección 'users' en Firestore
-      const usersCollection = collection(this.firestore, 'users');
-      // Agregar el documento
-      await addDoc(usersCollection, userData);
+      // Guarda el documento en Firestore con el UID como identificador
+      const userDocRef = doc(this.firestore, `users/${uid}`);
+      await setDoc(userDocRef, userData);
 
       // Mostrar el código en un alert
       const alert = await this.alertCtrl.create({
-        header: 'Código Generado',
+        header: 'Registro Exitoso',
         message: `El código para iniciar sesión del niño es: <strong>${childCode}</strong>`,
         buttons: [
           {
             text: 'OK',
             handler: () => {
-              // Redirigir al home de padres después de guardar
               this.navCtrl.navigateRoot('/tabs');
             },
           },
@@ -90,31 +97,32 @@ export class CompletarPerfilPage implements OnInit {
 
   loadPayPalButton() {
     const script = document.createElement('script');
-    script.src = 'https://www.paypal.com/sdk/js?client-id=AZXE4b4Ov1ALlcTr3hWiE-urbPfq_RU1KtUFD8GmlnFfVw4pLCzN9hFgtrBBypf6rWhSNX9mC9fJwMZO&currency=USD';
-    
+    script.src =
+      'https://www.paypal.com/sdk/js?client-id=AZXE4b4Ov1ALlcTr3hWiE-urbPfq_RU1KtUFD8GmlnFfVw4pLCzN9hFgtrBBypf6rWhSNX9mC9fJwMZO&currency=USD';
+
     script.onload = () => {
       paypal.Buttons({
         createOrder: (data: any, actions: any) => {
-          // Solo mostrar pagos si es premium o gold
           if (this.selectedVersion === 'free') {
             alert('La versión gratuita no requiere pago.');
             return false;
           }
-  
-          // Verificar que la versión seleccionada existe en versionPrices
+
           const price = this.versionPrices[this.selectedVersion as keyof typeof this.versionPrices];
           if (!price) {
             console.error('Versión seleccionada no válida.');
             alert('Ocurrió un problema al procesar el pago. Intenta de nuevo.');
             return false;
           }
-  
+
           return actions.order.create({
-            purchase_units: [{
-              amount: {
-                value: price, // Monto según la versión seleccionada
+            purchase_units: [
+              {
+                amount: {
+                  value: price,
+                },
               },
-            }],
+            ],
           });
         },
         onApprove: (data: any, actions: any) => {
@@ -125,7 +133,7 @@ export class CompletarPerfilPage implements OnInit {
         onError: (err: any) => {
           console.error('Error con el pago: ', err);
           alert('Hubo un problema con el pago. Intenta de nuevo.');
-        }
+        },
       }).render('#paypal-button-container');
     };
     document.body.appendChild(script);

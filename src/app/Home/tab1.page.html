@@ -1,6 +1,6 @@
 <ion-content class="home-content">
   
-  <!-- Encabezado con título y logo -->
+  <!-- Encabezado -->
   <div class="header">
     <img src="assets/img/Logo.png" alt="TEA Logo" class="logo" />
     <hr>
@@ -24,10 +24,62 @@
     <ion-avatar class="profile-avatar">
       <img src="assets/img/avatar.png" alt="Profile" />
     </ion-avatar>
-    <h3>Hola, {{ userEmail }}</h3>
+    <h3>Hola, {{ userName }}</h3>
     <p>Bienvenido a TEAcompaño</p>
   </div>
+  <!-- Contenido para versión Free -->
+  <div *ngIf="userVersion === 'free'">
+    <div class="dashboard">
+      <h4>Contenido Gratuito</h4>
+      <p>Accede a los recursos básicos disponibles para tu versión.</p>
+    </div>
+    <div class="quick-access">
+      <div class="access-buttons">
+        <ion-button class="access-button" (click)="goTocalendario()">
+          <img src="assets/img/calendario.png" alt="Calendario" class="icono-imagen" />
+        </ion-button>
+      </div>
+    </div>
+  </div>
 
+  <!-- Contenido adicional para versión Premium -->
+  <div *ngIf="userVersion === 'premium'">
+    <div class="course-banner">
+      <h4>Nuevo curso para ti</h4>
+      <ion-button class="join-button">UNIRSE</ion-button>
+    </div>
+    <div class="acceso">
+      <h4>Mira cómo le fue a tu hijo hoy</h4>
+    </div>
+    <div class="quick-access">
+      <div class="access-buttons">
+        <ion-button class="access-button" (click)="goToFeedback()">
+          <img src="assets/img/feedback.png" alt="Feedback" class="icono-imagen" />
+        </ion-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido exclusivo para versión Gold -->
+  <div *ngIf="userVersion === 'gold'">
+    <div class="news-section">
+      <h4>Noticias Exclusivas</h4>
+      <ul class="news-list">
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Síntomas de TEA</li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Día internacional del TEA</li>
+      </ul>
+    </div>
+    <div class="acceso">
+      <h4>Usa estos canales donde encontrarás ayuda</h4>
+    </div>
+    <div class="quick-access">
+      <div class="access-button">
+        <ion-button class="access-button" (click)="goTocanales()">
+          <img src="assets/img/foro.png" alt="Canales" class="icono-imagen" />
+        </ion-button>
+      </div>
+    </div>
+  </div>
   <!-- Dashboard y cursos -->
   <div class="dashboard">
     <h4>Me mantengo en aprendizaje para ayudar a mi hijo </h4>
