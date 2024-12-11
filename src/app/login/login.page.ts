@@ -12,7 +12,7 @@ export class LoginPage implements OnInit {
   constructor(private navCtrl: NavController) { }
 
   navigateToLoginPadres() {
-    this.navCtrl.navigateForward('/login-padres');
+    this.navCtrl.navigateForward('/iniciar-sesion');
   }
 
   navigateToLoginNinos() {

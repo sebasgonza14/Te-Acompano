@@ -2,16 +2,24 @@
   <div class="header-background"></div>
   <div class="login-container">
     <img src="assets/img/Logo.png" alt="Character" class="character-image" />
-    <h2>Welcome back!</h2>
+    <h2>¡Bienvenido!</h2>
     
+    <!-- Campo de entrada del código -->
     <ion-item>
-      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-      <ion-input type="password" placeholder="Password"></ion-input>
-      <ion-icon name="eye-outline" slot="end"></ion-icon>
+      <ion-icon name="key-outline" slot="start"></ion-icon>
+      <ion-input
+        type="text"
+        placeholder="Ingresa tu código"
+        [(ngModel)]="code"
+        name="code"
+        required
+      ></ion-input>
     </ion-item>
     
-    <ion-button expand="block" class="submit-button" (click)="navigateToInicio()">Ingresar código</ion-button>
-
+    <!-- Botón para validar código -->
+    <ion-button expand="block" class="submit-button" (click)="loginWithCode()">
+      Ingresar código
+    </ion-button>
     
     <p class="footer-text">
       Versión 1.0.0 &nbsp;&bull;&nbsp; Powered by Srdn.Co &nbsp;&bull;&nbsp; Ayuda & Soporte

@@ -62,7 +62,8 @@ const routes: Routes = [
   {
     path: 'canales',
     loadChildren: () => import('./canales/canales.module').then( m => m.CanalesPageModule)
-  },  {
+  },
+  {
     path: 'preguntas',
     loadChildren: () => import('./preguntas/preguntas.module').then( m => m.PreguntasPageModule)
   },
@@ -85,6 +86,11 @@ const routes: Routes = [
   {
     path: 'iniciar-sesion',
     loadChildren: () => import('./iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
+  },
+  {
+    path: 'completar-perfil',
+    loadChildren: () => import('./completar-perfil/completar-perfil.module').then( m => m.CompletarPerfilPageModule),
+    
   },
 
  

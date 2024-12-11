@@ -1,15 +1,9 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Iniciar-Sesion</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Iniciar Sesion</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="login-content">
+  <div class="header-background"></div>
+  <div class="login-container">
+    <img src="assets/img/Logo.png" alt="Character" class="character-image" />
+    <h2>Welcome back!</h2>
+  </div>  
 
   <ion-item>
     <ion-label position="floating">Email</ion-label>
@@ -21,4 +15,7 @@
   </ion-item>
   <ion-button expand="full" (click)="login()">Iniciar Sesión</ion-button>
   <ion-button expand="full" fill="outline" routerLink="/registrarse">Registrarse</ion-button>
+
 </ion-content>
+
+

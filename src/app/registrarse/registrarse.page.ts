@@ -22,7 +22,7 @@ export class RegistrarsePage implements OnInit {
     this.firebaseService.register(this.email, this.password)
       .then(() => {
         this.presentAlert('Éxito', 'Usuario creado con éxito.');
-        this.router.navigate(['/iniciar-sesion']); // Redirigir al usuario después del registro exitoso
+        this.router.navigate(['/completar-perfil']); // Redirigir al usuario después del registro exitoso
       })
       .catch(error => {
         this.presentAlert('Error', 'No se pudo registrar. Por favor intente nuevamente.');
