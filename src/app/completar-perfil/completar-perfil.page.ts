@@ -25,8 +25,8 @@ export class CompletarPerfilPage implements OnInit {
   selectedVersion: string = 'free'; // Versión seleccionada por defecto
 
   versionPrices: { [key: string]: string } = {
-    premium: '10.00',
-    gold: '20.00',
+    premium: '7.99',
+    gold: '11.99',
   };
 
   constructor(

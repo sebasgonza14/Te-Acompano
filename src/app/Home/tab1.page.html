@@ -19,6 +19,9 @@
     <h3>Hola, {{ userName }}</h3>
     <p>Bienvenido a TEAcompaño</p>
   </div>
+
+
+
   <!-- Contenido para versión Free -->
   <div *ngIf="userVersion === 'free'">
     <div class="dashboard">
@@ -33,6 +36,8 @@
       </div>
     </div>
   </div>
+
+  
 
   <!-- Contenido adicional para versión Premium -->
   <div *ngIf="userVersion === 'premium'">
@@ -51,6 +56,9 @@
       </div>
     </div>
   </div>
+
+
+
 
   <!-- Contenido exclusivo para versión Gold -->
   <div *ngIf="userVersion === 'gold'">
@@ -71,8 +79,8 @@
         </ion-button>
       </div>
     </div>
-  </div>
-  <!-- Dashboard y cursos -->
+
+    <!-- Dashboard y cursos -->
   <div class="dashboard">
     <h4>Me mantengo en aprendizaje para ayudar a mi hijo </h4>
   </div>
@@ -131,7 +139,7 @@
 
   <div class="acceso">
     <h4>Usa estos canales donde encontratras ayuda</h4>
- </div>
+  </div>
  
  <div class="quick-access">
   <div class="access-button">
@@ -139,6 +147,9 @@
       <img src="assets/img/foro.png" alt="Feedback" class="icono-imagen" />
     </ion-button>
   </div>
+
+  </div>
+  
   
 
 </div>
