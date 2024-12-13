@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Firestore, doc, setDoc } from '@angular/fire/firestore'; // Importa doc y setDoc
+import { Firestore, doc, setDoc } from '@angular/fire/firestore';
 import { NavController, AlertController } from '@ionic/angular';
-import { FirebaseService } from '../services/firebase.service'; // Importa el servicio de Firebase
+import { FirebaseService } from '../services/firebase.service';
 
-declare var paypal: any; // Declaramos PayPal para integrarlo con su SDK
+declare var paypal: any;
 
 @Component({
   selector: 'app-completar-perfil',
@@ -23,6 +23,7 @@ export class CompletarPerfilPage implements OnInit {
   };
 
   selectedVersion: string = 'free'; // Versión seleccionada por defecto
+  isPaymentCompleted: boolean = false; // Controla si el botón "Continuar" está habilitado
 
   versionPrices: { [key: string]: string } = {
     premium: '7.99',
@@ -33,42 +34,48 @@ export class CompletarPerfilPage implements OnInit {
     private firestore: Firestore,
     private navCtrl: NavController,
     private alertCtrl: AlertController,
-    private firebaseService: FirebaseService // Inyecta el servicio de Firebase
+    private firebaseService: FirebaseService
   ) {}
 
   ngOnInit() {
     this.loadPayPalButton();
+    this.onVersionChange(); // Evalúa la versión inicial seleccionada
+  }
+
+  onVersionChange() {
+    if (this.selectedVersion === 'free') {
+      this.isPaymentCompleted = true;
+    } else {
+      this.isPaymentCompleted = false;
+    }
   }
 
   async submitForm() {
-    const currentUser = this.firebaseService.getCurrentUser(); // Obtén el usuario autenticado
+    const currentUser = this.firebaseService.getCurrentUser();
     if (!currentUser) {
       alert('Error: No se encontró un usuario autenticado.');
       return;
     }
 
-    const uid = currentUser.uid; // Obtén el UID del usuario autenticado
-    const childCode = this.generateCode(); // Generar el código del niño
+    const uid = currentUser.uid;
+    const childCode = this.generateCode();
 
-    // Preparar los datos para guardar en Firestore
     const userData = {
       parent: this.parent,
       child: {
         ...this.child,
-        code: childCode, // Código único del niño
+        code: childCode,
       },
-      version: this.selectedVersion, // Guardar la versión seleccionada
+      version: this.selectedVersion,
     };
 
     try {
-      // Guarda el documento en Firestore con el UID como identificador
       const userDocRef = doc(this.firestore, `users/${uid}`);
       await setDoc(userDocRef, userData);
 
-      // Mostrar el código en un alert
       const alert = await this.alertCtrl.create({
         header: 'Registro Exitoso',
-        message: `Guarda este código ya que les servira para iniciar sesión del niño, CODIGO: ${childCode}`,
+        message: `Guarda este código: ${childCode}`,
         buttons: [
           {
             text: 'OK',
@@ -83,14 +90,13 @@ export class CompletarPerfilPage implements OnInit {
       console.error('Error al guardar en Firestore:', error);
       const alert = await this.alertCtrl.create({
         header: 'Error',
-        message: 'No se pudo guardar la información. Inténtalo de nuevo.',
+        message: 'No se pudo guardar la información.',
         buttons: ['OK'],
       });
       await alert.present();
     }
   }
 
-  // Método para generar un código único de 4 dígitos
   generateCode(): string {
     return Math.floor(1000 + Math.random() * 9000).toString();
   }
@@ -105,14 +111,13 @@ export class CompletarPerfilPage implements OnInit {
         createOrder: (data: any, actions: any) => {
           if (this.selectedVersion === 'free') {
             alert('La versión gratuita no requiere pago.');
-            return false;
+            return null;
           }
 
           const price = this.versionPrices[this.selectedVersion as keyof typeof this.versionPrices];
           if (!price) {
-            console.error('Versión seleccionada no válida.');
-            alert('Ocurrió un problema al procesar el pago. Intenta de nuevo.');
-            return false;
+            alert('Ocurrió un problema al procesar el pago.');
+            return null;
           }
 
           return actions.order.create({
@@ -125,17 +130,21 @@ export class CompletarPerfilPage implements OnInit {
             ],
           });
         },
-        onApprove: (data: any, actions: any) => {
+        onApprove: async (data: any, actions: any) => {
           return actions.order.capture().then((details: any) => {
             alert('Pago completado con éxito por ' + details.payer.name.given_name);
+            this.isPaymentCompleted = true; // Activa el botón al completar el pago
           });
         },
+        onCancel: () => {
+          alert('El pago fue cancelado.');
+        },
         onError: (err: any) => {
-          console.error('Error con el pago: ', err);
-          alert('Hubo un problema con el pago. Intenta de nuevo.');
+          alert('Hubo un problema con el pago.');
         },
       }).render('#paypal-button-container');
     };
+
     document.body.appendChild(script);
   }
 }

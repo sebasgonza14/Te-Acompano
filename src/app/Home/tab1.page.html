@@ -24,36 +24,118 @@
 
   <!-- Contenido para versión Free -->
   <div *ngIf="userVersion === 'free'">
-    <div class="dashboard">
-      <h4>Contenido Gratuito</h4>
-      <p>Accede a los recursos básicos disponibles para tu versión.</p>
-    </div>
-    <div class="quick-access">
-      <div class="access-buttons">
-        <ion-button class="access-button" (click)="goTocalendario()">
-          <img src="assets/img/calendario.png" alt="Calendario" class="icono-imagen" />
-        </ion-button>
+      <div class="news-section">
+        <h4>Contenido Gratis</h4>
+        <ul class="news-list">
+          <li><ion-icon name="chevron-forward-outline"></ion-icon> Dashboard del niño </li>
+          <li><ion-icon name="chevron-forward-outline"></ion-icon> Cursos </li>
+          <li><ion-icon name="chevron-forward-outline"></ion-icon> Citas con psicólogos</li>
+        </ul>
       </div>
+      
+
+      <!-- Dashboard y cursos -->
+    <div class="dashboard">
+      <h4>Me mantengo en aprendizaje para ayudar a mi hijo </h4>
+    </div>
+    <div>
+      <img src="assets/img/aprendizaje.jpg" alt="Profile" />
+    </div>
+
+
+    <!-- Sección de acceso rápido -->
+    
+
+    <div class="acceso">
+      <h4>Mira como le fue a tu hijo hoy</h4>
+  </div>
+  <div class="quick-access">
+    <div class="access-button">
+      <ion-button class="access-button" (click)="goToFeedback()">
+        <img src="assets/img/feedback.png" alt="Feedback" class="icono-imagen" />
+      </ion-button>
     </div>
   </div>
 
-  
+    
+
+    <!-- Sección de noticias -->
+    <div class="news-section">
+      <h4>Noticias</h4>
+      <ul class="news-list">
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> 1 de cada 100 niños tienen autismo en el mundo</li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> El día internacional del TEA</li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Síntomas de TEA</li>
+      </ul>
+    </div>
+
+    <!-- Imagen final -->
+    <div class="community-image">
+      <img src="assets/img/comunidad.png" alt="Comunidad" />
+    </div>
+  </div>
+
+
 
   <!-- Contenido adicional para versión Premium -->
   <div *ngIf="userVersion === 'premium'">
-    <div class="course-banner">
-      <h4>Nuevo curso para ti</h4>
-      <ion-button class="join-button">UNIRSE</ion-button>
-    </div>
-    <div class="acceso">
-      <h4>Mira cómo le fue a tu hijo hoy</h4>
-    </div>
-    <div class="quick-access">
-      <div class="access-buttons">
-        <ion-button class="access-button" (click)="goToFeedback()">
-          <img src="assets/img/feedback.png" alt="Feedback" class="icono-imagen" />
-        </ion-button>
+      <div class="news-section">
+        <h4>Contenido Gold</h4>
+        <ul class="news-list">
+          <li><ion-icon name="chevron-forward-outline"></ion-icon> Canales</li>
+          <li><ion-icon name="chevron-forward-outline"></ion-icon> Dashboard del niño </li>
+          <li><ion-icon name="chevron-forward-outline"></ion-icon> Cursos </li>
+          <li><ion-icon name="chevron-forward-outline"></ion-icon> Citas con psicólogos</li>
+        </ul>
       </div>
+      <div class="acceso">
+        <h4>Usa estos canales donde encontrarás ayuda</h4>
+      </div>
+      <div class="quick-access">
+        <div class="access-button">
+          <ion-button class="access-button" (click)="goTocanales()">
+            <img src="assets/img/foro.png" alt="Canales" class="icono-imagen" />
+          </ion-button>
+        </div>
+      </div>
+
+      <!-- Dashboard y cursos -->
+    <div class="dashboard">
+      <h4>Me mantengo en aprendizaje para ayudar a mi hijo </h4>
+    </div>
+    <div>
+      <img src="assets/img/aprendizaje.jpg" alt="Profile" />
+    </div>
+
+
+    <!-- Sección de acceso rápido -->
+
+    <div class="acceso">
+      <h4>Mira como le fue a tu hijo hoy</h4>
+  </div>
+  <div class="quick-access">
+    <div class="access-button">
+      <ion-button class="access-button" (click)="goToFeedback()">
+        <img src="assets/img/feedback.png" alt="Feedback" class="icono-imagen" />
+      </ion-button>
+    </div>
+  </div>
+
+    
+
+    <!-- Sección de noticias -->
+    <div class="news-section">
+      <h4>Noticias</h4>
+      <ul class="news-list">
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> 1 de cada 100 niños tienen autismo en el mundo</li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> El día internacional del TEA</li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Síntomas de TEA</li>
+      </ul>
+    </div>
+
+    <!-- Imagen final -->
+    <div class="community-image">
+      <img src="assets/img/comunidad.png" alt="Comunidad" />
     </div>
   </div>
 
@@ -63,10 +145,13 @@
   <!-- Contenido exclusivo para versión Gold -->
   <div *ngIf="userVersion === 'gold'">
     <div class="news-section">
-      <h4>Noticias Exclusivas</h4>
+      <h4>Contenido Gold</h4>
       <ul class="news-list">
-        <li><ion-icon name="chevron-forward-outline"></ion-icon> Síntomas de TEA</li>
-        <li><ion-icon name="chevron-forward-outline"></ion-icon> Día internacional del TEA</li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Canales</li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Dashboard del niño </li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Cursos </li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Citas con psicólogos</li>
+        <li><ion-icon name="chevron-forward-outline"></ion-icon> Itinerario hijo  </li>
       </ul>
     </div>
     <div class="acceso">
@@ -88,10 +173,6 @@
     <img src="assets/img/aprendizaje.jpg" alt="Profile" />
   </div>
 
-  <div class="course-banner">
-    <h4>Tenemos un nuevo curso para ti!!</h4>
-    <ion-button  class="join-button">UNIRSE</ion-button>
-  </div>
 
   <!-- Sección de acceso rápido -->
    <div class="acceso">
@@ -136,21 +217,6 @@
   <div class="community-image">
     <img src="assets/img/comunidad.png" alt="Comunidad" />
   </div>
-
-  <div class="acceso">
-    <h4>Usa estos canales donde encontratras ayuda</h4>
-  </div>
- 
- <div class="quick-access">
-  <div class="access-button">
-    <ion-button class="access-button" (click)="goTocanales()">
-      <img src="assets/img/foro.png" alt="Feedback" class="icono-imagen" />
-    </ion-button>
-  </div>
-
-  </div>
-  
-  
 
 </div>
 

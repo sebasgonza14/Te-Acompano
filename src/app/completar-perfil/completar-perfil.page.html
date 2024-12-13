@@ -49,15 +49,16 @@
       <ion-card-content>
         <ion-item>
           <ion-label>Versión</ion-label>
-          <ion-select [(ngModel)]="selectedVersion" name="version">
+          <ion-select [(ngModel)]="selectedVersion" name="version" (ionChange)="onVersionChange()">
             <ion-select-option value="free">TEAEssential (Gratis)</ion-select-option>
             <ion-select-option value="premium">TEAEnterprise($7,99)</ion-select-option>
             <ion-select-option value="gold">TEAMax($11,99)</ion-select-option>
-          </ion-select>
+          </ion-select>          
         </ion-item>
       </ion-card-content>
     </ion-card>
     <div id="paypal-button-container" style="margin-top: 20px;"></div>
-    <ion-button expand="block" type="submit">Continuar</ion-button>
+    <ion-button expand="block" type="submit" [disabled]="!isPaymentCompleted">Continuar</ion-button>
+
   </form>
 </ion-content>

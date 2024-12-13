@@ -1,0 +1,164 @@
+[33mcommit 2960fed06867b0435d0732389e7f92480690d825[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Fri Dec 13 15:59:24 2024 -0500
+
+    Nombre de usuario en chats, nombre del niño al iniciar la sesión. Falta navegación y el tema de tareas asignadas según el usuario.
+
+[33mcommit fe16e08e54278cb1836cae0af1f53017c2b5f72b[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Thu Dec 12 20:26:06 2024 -0500
+
+    Verperfil actualizacion
+
+[33mcommit 7de39c59f02add9dec327d0be533a1a40fabe9d4[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Wed Dec 11 00:56:49 2024 -0500
+
+    Implementación de vistas según la subscripción que tiene, cambio de cromática y asignación de nombre en el inicio en vez de el correo.
+
+[33mcommit 28080a822d2593c64fcd6d480dd3c01c6b98a1a6[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Tue Dec 10 23:24:48 2024 -0500
+
+    Implementación de botón de pagos y también de version en la base de datos. Falta de configurar las vistas según la versión.
+
+[33mcommit 859864ddd3a2ccb408855d1b77a0d07110bfb081[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Tue Dec 10 20:34:41 2024 -0500
+
+    Actualizacion Proyecto4
+
+[33mcommit 06e12c9670b68a87214fd10283d686a85518d88f[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Wed Nov 27 00:17:33 2024 -0500
+
+    Authenticator de firebase, iniciar-sesion,registrarse son las nuevas páginas de registro de usuarios por correo y mail.
+
+[33mcommit b80f2ebac3180dfb5e63a01b1fc03074eb037390[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Sat Nov 23 13:09:08 2024 -0500
+
+    Canales
+
+[33mcommit 157fdc78679241ee9a23efb80771642e3f344400[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Wed Nov 20 12:05:55 2024 -0500
+
+    Diseño Proyecto2
+
+[33mcommit fafd1775b634e5ce164a3801e98c08df7c6c0d8f[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Tue Nov 19 18:50:16 2024 -0500
+
+    Proyecto2
+
+[33mcommit 07ecda3b9f27477613c45e6f4b00f51fee175e06[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Tue Nov 19 14:59:48 2024 -0500
+
+    Implementación de calendario conectado con base de datos y mostrar en la vista tareas
+
+[33mcommit a20843edbf56dd728e390c2dc9d639ab16b58209[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Tue Nov 19 14:20:45 2024 -0500
+
+    Añadir usuarioes en DB
+
+[33mcommit db6ba821fb3e2c6859f763b6c437171fd580740f[m
+Merge: 7dff86f c5b7ce4
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Mon Nov 18 11:14:45 2024 -0500
+
+    Proyecto unificado
+
+[33mcommit 7dff86fa4cb2d2c79bbebc9a86fae2c7473f2137[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Mon Nov 18 10:43:56 2024 -0500
+
+    nueve actualizacion
+
+[33mcommit c5b7ce499ec26df0c4ded5d09b305ed8f3a48baa[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Wed Nov 13 12:54:05 2024 -0500
+
+    Proyecto 1
+
+[33mcommit 40e66e80b7da071c602b060c495d0c31c31e8772[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Wed Nov 13 10:45:46 2024 -0500
+
+    Belen
+
+[33mcommit fd2957740166dfdbb776d6678d149dad2b16cac0[m
+Merge: 94e75ed 256fd47
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Mon Nov 11 13:53:53 2024 -0500
+
+    Merge branch 'main' of https://github.com/sebasgonza14/Te-Acompano
+
+[33mcommit 94e75ed43634f23485d269a474bcb1addb2f9a5f[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Sat Nov 9 20:35:52 2024 -0500
+
+    Flujo de paginas
+
+[33mcommit 256fd47ab6a00ca1af90a316cc3ce2e2a83531b0[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Sat Nov 9 20:27:39 2024 -0500
+
+    iMPLEMENTACIÓN DE BASE DE DATOS, FAMILIARES, PENDIENTE NINOS Y PSICOLOGOS. fIREBASE.
+
+[33mcommit 5d3e2ad97aa2107b27e276012373b2c3d2621a9d[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Mon Oct 14 11:20:12 2024 -0500
+
+    Cambio de color de componetes y de íconos de navegación
+
+[33mcommit 82af28bf5c0ba90fb74b5604431fff45cb53d701[m
+Merge: 0a26331 e1fd930
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Sun Oct 13 22:20:57 2024 -0500
+
+    home
+
+[33mcommit 0a26331457837318be060e247dc223ef6520e20a[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Sun Oct 13 22:07:52 2024 -0500
+
+    home
+
+[33mcommit e1fd930d3e2f08a29e37acf5b014dbf119d7fd07[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Sun Oct 13 22:06:15 2024 -0500
+
+    Botones con iconos, página de citas y cursos
+
+[33mcommit 512b666d81b05cd68f950511c2435587b15ca37f[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Sun Oct 13 21:30:59 2024 -0500
+
+    Cambio Botones y página de citas
+
+[33mcommit d593288f134b0b9ed86d4f332cc80cfa16b84cc9[m
+Author: Belen Boosmediano <mbbosmediano@.estud.usfq.edu.ec>
+Date:   Sun Oct 13 20:55:36 2024 -0500
+
+    copia linea 7
+
+[33mcommit dd053b59cf68f8a8974cf0bb36b554bf469ab7e4[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Sun Oct 13 20:37:31 2024 -0500
+
+    Push de archivos
+
+[33mcommit 440cdb421840775e648099b65dec428772d33701[m
+Author: sebasgonza14 <sebasgonza14@gmail.com>
+Date:   Sun Oct 13 20:33:58 2024 -0500
+
+    first commit
+
+[33mcommit fe91cfde73fed1284eed2907074aa38420e20795[m
+Author: Antonio Gonzalez <agonzalez1@estud.usfq.edu.ec>
+Date:   Wed Sep 18 10:54:01 2024 -0500
+
+    Initial commit
