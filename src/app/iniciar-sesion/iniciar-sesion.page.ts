@@ -39,6 +39,10 @@ export class IniciarSesionPage implements OnInit {
     await alert.present();
   }
 
+  goBack() {
+    this.router.navigate(['/login']);
+  }
+
   ngOnInit() {
   }
 }

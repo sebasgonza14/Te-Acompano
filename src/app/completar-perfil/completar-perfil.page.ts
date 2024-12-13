@@ -68,7 +68,7 @@ export class CompletarPerfilPage implements OnInit {
       // Mostrar el código en un alert
       const alert = await this.alertCtrl.create({
         header: 'Registro Exitoso',
-        message: `El código para iniciar sesión del niño es: <strong>${childCode}</strong>`,
+        message: `Guarda este código ya que les servira para iniciar sesión del niño, CODIGO: ${childCode}`,
         buttons: [
           {
             text: 'OK',

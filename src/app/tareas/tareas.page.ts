@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Firestore, collection, query, where, getDocs } from '@angular/fire/firestore';
+import { Router } from '@angular/router'; 
 
 
 @Component({
@@ -11,7 +12,7 @@ export class TareasPage implements OnInit {
   tasks: Array<{ horario: string; tarea: string }> = []; // Lista de tareas
   currentDate: string = ''; // Fecha actual formateada
 
-  constructor(private firestore: Firestore) {}
+  constructor(private firestore: Firestore , private router: Router) {}
 
   ngOnInit() {
     this.getCurrentDate(); // Obtener la fecha actual
@@ -54,10 +55,8 @@ export class TareasPage implements OnInit {
     }
     return 'assets/img/default.png'; // Ícono por defecto
   }
-
-  // Navegar a la página de inicio
   navigateToInicio() {
-    // Aquí puedes usar un router para navegar a la página de inicio
-    console.log('/inicio');
+    this.router.navigate(['/inicio']); // Redirige a la página de inicio
+    console.log('Redirigiendo a /inicio');
   }
 }

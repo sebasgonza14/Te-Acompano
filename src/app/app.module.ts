@@ -22,6 +22,7 @@ import { getVertexAI, provideVertexAI } from '@angular/fire/vertexai-preview';
 import { Capacitor } from '@capacitor/core';
 
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],

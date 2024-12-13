@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil del Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-container">
+    <!-- Avatar del Usuario -->
+    <img src="assets/img/avatar.png" alt="Avatar" class="avatar-image" />
+
+    <!-- Información del Usuario -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Información Personal</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Nombre:</ion-label>
+          <ion-text>{{ userData.parent?.nombre || 'No disponible' }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Apellido:</ion-label>
+          <ion-text>{{ userData.parent?.apellido || 'No disponible' }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Versión:</ion-label>
+          <ion-text>{{ userData.version || 'Free' }}</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Información del Hijo -->
+    <ion-card *ngIf="userData.child">
+      <ion-card-header>
+        <ion-card-title>Información del Hijo</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Nombre:</ion-label>
+          <ion-text>{{ userData.child.nombre || 'No disponible' }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Apellido:</ion-label>
+          <ion-text>{{ userData.child.apellido || 'No disponible' }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Código:</ion-label>
+          <ion-text>{{ userData.child.code || 'No disponible' }}</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

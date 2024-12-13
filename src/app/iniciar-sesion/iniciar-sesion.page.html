@@ -1,6 +1,11 @@
 <ion-content class="login-content">
   <div class="header-background"></div>
   <div class="login-container">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()" style="margin: 0; padding: 0;">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <img src="assets/img/Logo.png" alt="Character" class="character-image" />
     <h2>Welcome back!</h2>
   </div>  

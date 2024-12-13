@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, PopoverController } from '@ionic/angular';
 import { FirebaseService } from '../services/firebase.service';
 
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -51,6 +52,8 @@ export class Tab1Page implements OnInit {
     }
   }
 
+
+
   logout() {
     this.popoverController.dismiss(); // Cierra el popover
     this.navCtrl.navigateRoot('/login'); // Redirige a la página de login
@@ -67,4 +70,9 @@ export class Tab1Page implements OnInit {
   goTocanales() {
     this.navCtrl.navigateForward('/canales'); // Navega a la página de Citas
   }
+
+  goToEditarPerfil() {
+    this.navCtrl.navigateForward('/editar-perfil'); // Navegar a la página de editar perfil
+  }
+  
 }

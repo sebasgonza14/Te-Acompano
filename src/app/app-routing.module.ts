@@ -91,7 +91,11 @@ const routes: Routes = [
     path: 'completar-perfil',
     loadChildren: () => import('./completar-perfil/completar-perfil.module').then( m => m.CompletarPerfilPageModule),
     
+  },  {
+    path: 'editar-perfil',
+    loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
   },
+
 
  
 

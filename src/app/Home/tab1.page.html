@@ -3,26 +3,18 @@
   <!-- Encabezado -->
   <div class="header">
     <img src="assets/img/Logo.png" alt="TEA Logo" class="logo" />
-    <hr>
-    <ion-icon name="notifications-outline" class="icon"></ion-icon>
-    <p></p>
-    <p></p>
-    <p></p>
-    <ion-button fill="clear" class="icon" >
-      <ion-icon name="settings-outline" class="icon"></ion-icon>
-        <ion-content>
-          <ion-list>
-            <ion-item button (click)="logout()">Cerrar sesión</ion-item>
-          </ion-list>
-        </ion-content>
-    </ion-button>
+    
     
   </div>
 
   <!-- Bienvenida y perfil de usuario -->
   <div class="welcome-section">
     <ion-avatar class="profile-avatar">
-      <img src="assets/img/avatar.png" alt="Profile" />
+      <img 
+      src="assets/img/avatar.png" 
+      alt="Avatar" 
+      class="avatar-image"
+      (click)="goToEditarPerfil()" />
     </ion-avatar>
     <h3>Hola, {{ userName }}</h3>
     <p>Bienvenido a TEAcompaño</p>
