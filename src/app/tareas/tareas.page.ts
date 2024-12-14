@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Firestore, collection, query, where, getDocs } from '@angular/fire/firestore';
-import { Router } from '@angular/router'; 
-
+import { Firestore, doc, getDoc } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tareas',
@@ -9,40 +8,49 @@ import { Router } from '@angular/router';
   styleUrls: ['./tareas.page.scss'],
 })
 export class TareasPage implements OnInit {
-  tasks: Array<{ horario: string; tarea: string }> = []; // Lista de tareas
+  tasks: Array<{ fecha: string; tarea: string }> = []; // Lista de tareas
   currentDate: string = ''; // Fecha actual formateada
+  childCode: string = ''; // Código del niño
 
-  constructor(private firestore: Firestore , private router: Router) {}
+  constructor(private firestore: Firestore, private router: Router) {}
 
   ngOnInit() {
+    this.childCode = localStorage.getItem('childCode') || ''; // Recuperar el código del niño desde el localStorage
     this.getCurrentDate(); // Obtener la fecha actual
-    this.loadTasks(); // Cargar las tareas desde Firebase
+    this.loadTasks(); // Cargar las tareas asignadas al niño
   }
 
   // Obtener y formatear la fecha actual
   getCurrentDate() {
     const today = new Date();
-    const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    const options: Intl.DateTimeFormatOptions = {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    };
     this.currentDate = today.toLocaleDateString('es-ES', options);
   }
 
-  // Cargar las tareas desde Firebase
+  // Cargar las tareas asignadas al niño desde Firebase
   async loadTasks() {
-    const today = new Date(); // Fecha actual
-    const startOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate()).toISOString(); // Inicio del día actual
-    const endOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1).toISOString(); // Inicio del siguiente día
-  
-    const tasksRef = collection(this.firestore, 'Calendario');
-    const q = query(tasksRef, where('fecha', '>=', startOfDay), where('fecha', '<', endOfDay)); // Filtrar por rango de fecha
-    const querySnapshot = await getDocs(q);
-  
-    // Mapear las tareas desde Firebase a nuestra estructura
-    this.tasks = querySnapshot.docs.map((doc) => ({
-      horario: doc.data()['horario'] || 'Horario no definido', // Asignar un horario si existe
-      tarea: doc.data()['tarea'],
-    }));
+    if (!this.childCode) {
+      alert('No se encontró el código del niño. Verifique el acceso.');
+      return;
+    }
+
+    // Obtener el documento del padre usando el `childCode`
+    const parentDocRef = doc(this.firestore, `users/${this.childCode}`);
+    const parentDocSnapshot = await getDoc(parentDocRef);
+
+    if (parentDocSnapshot.exists()) {
+      const data = parentDocSnapshot.data();
+      this.tasks = data['tasks'] || []; // Cargar las tareas asociadas al `child code`
+    } else {
+      console.warn('No se encontró un documento con este childCode.');
+      this.tasks = [];
+    }
   }
-  
 
   // Obtener el ícono dinámico basado en la tarea
   getTaskIcon(task: { tarea: string }) {
@@ -55,8 +63,10 @@ export class TareasPage implements OnInit {
     }
     return 'assets/img/default.png'; // Ícono por defecto
   }
+
+  // Navegar a la página de inicio
   navigateToInicio() {
-    this.router.navigate(['/inicio']); // Redirige a la página de inicio
+    this.router.navigate(['/inicio']);
     console.log('Redirigiendo a /inicio');
   }
 }

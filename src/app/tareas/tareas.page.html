@@ -9,7 +9,7 @@
   <div class="tasks-container" *ngIf="tasks.length > 0; else noTasks">
     <ion-card *ngFor="let task of tasks" class="task-card">
       <div class="task-info">
-        <p>{{ task.horario }}</p>
+        <p>{{ task.fecha }}</p>
         <h2>{{ task.tarea }}</h2>
       </div>
       <img [src]="getTaskIcon(task)" alt="Task Icon" class="task-icon" />
