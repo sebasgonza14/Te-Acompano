@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
+import { Router } from '@angular/router'; // Importa el Router
+
 
 @Component({
   selector: 'app-editar-perfil',
@@ -11,7 +13,7 @@ export class EditarPerfilPage implements OnInit {
   userData: any = {}; // Almacenará los datos del usuario
   userId: string = ''; // UID del usuario actual
 
-  constructor(private firebaseService: FirebaseService, private firestore: Firestore) {}
+  constructor(private firebaseService: FirebaseService, private firestore: Firestore, private router: Router ) {}
 
   async ngOnInit() {
     // Obtener el usuario actual
@@ -39,5 +41,10 @@ export class EditarPerfilPage implements OnInit {
     } catch (error) {
       console.error('Error al cargar los datos del usuario:', error);
     }
+  }
+
+  logout() {
+    localStorage.clear(); // Borra el almacenamiento local
+    this.router.navigate(['/login']); // Redirige a la página de login
   }
 }

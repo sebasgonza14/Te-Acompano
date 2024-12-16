@@ -26,8 +26,8 @@
 	--ion-color-primary-rgb: 74, 144, 226;
 	--ion-color-primary-contrast: #000000;
 	--ion-color-primary-contrast-rgb: 255, 255, 255;
-	--ion-color-primary-shade: #3d7cc1;
-	--ion-color-primary-tint: #5b9fe5;
+	--ion-color-primary-shade: #e9aefd;
+	--ion-color-primary-tint: #e9aefd;
   }
   
   /* Colores específicos para Android */
@@ -42,7 +42,7 @@
   
   :root {
 	--ion-color-primary: #e6a5fd; /* Color de fondo */
-	--ion-color-primary-contrast: #eda7f1; /* Color del texto en botones o elementos primarios */
+	--ion-color-primary-contrast: #e9aefd; /* Color del texto en botones o elementos primarios */
 	--ion-text-color: #000000; /* Color del texto */
   }
   
@@ -53,7 +53,7 @@
   
   /* Colores específicos para Android */
   .md {
-	--ion-text-color: #eb80e5; /* Texto blanco en Android */
+	--ion-text-color: #000000; /* Texto blanco en Android */
   }
   
   

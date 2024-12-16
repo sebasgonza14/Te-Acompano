@@ -46,4 +46,8 @@ export class LoginNinosPage {
       await alert.present();
     }
   }
+
+  goToLogin() {
+    this.navCtrl.navigateRoot('/login'); // Redirige a la pestaña 
+  }
 }
