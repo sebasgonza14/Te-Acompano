@@ -39,16 +39,21 @@ export class TareasPage implements OnInit {
       return;
     }
 
-    // Obtener el documento del padre usando el `childCode`
-    const parentDocRef = doc(this.firestore, `users/${this.childCode}`);
-    const parentDocSnapshot = await getDoc(parentDocRef);
+    try {
+      // Obtener el documento asociado al `childCode`
+      const docRef = doc(this.firestore, `Calendario/${this.childCode}`);
+      const docSnapshot = await getDoc(docRef);
 
-    if (parentDocSnapshot.exists()) {
-      const data = parentDocSnapshot.data();
-      this.tasks = data['tasks'] || []; // Cargar las tareas asociadas al `child code`
-    } else {
-      console.warn('No se encontró un documento con este childCode.');
-      this.tasks = [];
+      if (docSnapshot.exists()) {
+        const data = docSnapshot.data();
+        this.tasks = data['tasks'] || []; // Cargar las tareas asociadas al `childCode`
+      } else {
+        console.warn('No se encontró un documento con este childCode.');
+        this.tasks = [];
+      }
+    } catch (error) {
+      console.error('Error al cargar las tareas:', error);
+      alert('Hubo un problema al cargar las tareas. Intenta nuevamente.');
     }
   }
 

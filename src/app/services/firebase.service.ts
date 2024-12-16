@@ -27,6 +27,18 @@ export class FirebaseService {
     }
   }
 
+  // Obtener el childCode del usuario actual
+async getChildCode(uid: string): Promise<string | null> {
+  try {
+    const userData = await this.getUserData(uid); // Reutiliza getUserData
+    return userData?.child?.code || null; // Retorna el childCode si existe
+  } catch (error) {
+    console.error('Error al obtener el childCode:', error);
+    throw error;
+  }
+}
+
+
   // Guardar o actualizar tareas del usuario
   async saveTaskForUser(uid: string, task: { fecha: string; tarea: string }) {
     try {

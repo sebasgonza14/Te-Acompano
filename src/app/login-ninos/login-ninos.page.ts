@@ -29,9 +29,13 @@ export class LoginNinosPage {
       } else {
         // Obtener datos del primer documento encontrado
         const childData = querySnapshot.docs[0].data()['child']; // Accede al campo 'child' del documento usando corchetes
-        localStorage.setItem('childName', childData.nombre); // Guarda el nombre del niño en localStorage
+
+        // Guardar el nombre y código del niño en localStorage
+        localStorage.setItem('childName', childData.nombre);
+        localStorage.setItem('childCode', this.code);
 
         console.log('Nombre del niño guardado:', childData.nombre);
+        console.log('Código del niño guardado:', this.code);
 
         // Redirigir a la página de inicio
         this.navCtrl.navigateRoot('/inicio');
